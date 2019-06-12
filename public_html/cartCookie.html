@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Softdrink</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="cartCookie/cartCookie.css">
+        <script src="cartCookie/cartCookie.js">
+        </script>
+    </head>
+    <body onload="load()">
+        <table align="center">
+            <caption class="cap">Items:</caption>
+            <tr>
+                <td class="item-td">Coca<br><img src="image/Coca.jpg" alt="Coca"><br>
+                    5.000<u>đ</u> <input type="number" id="quan1" min="0" max="100">
+                    <input type="button" value="Add" onclick="addItem('Coca', 'quan1')"></td>
+                <td class="item-td">Pepsi<br><img src="image/Pepsi.jpg" alt="Pepsi"><br>
+                    5.000<u>đ</u> <input type="number" id="quan2" min="0" max="100">
+                    <input type="button" value="Add" onclick="addItem('Pepsi', 'quan2')"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+            <tr>
+                <td class="item-td">Fanta<br><img src="image/Fanta.jpg" alt="Fanta"><br>
+                    5.000<u>đ</u> <input type="number" id="quan3" min="0" max="100">
+                    <input type="button" value="Add" onclick="addItem('Fanta', 'quan3')"></td>
+                <td class="item-td">7Up<br><img src="image/7Up.jpg" alt="7Up"><br>
+                    5.000<u>đ</u> <input type="number" id="quan4" min="0" max="100">
+                    <input type="button" value="Add" onclick="addItem('7Up', 'quan4')"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+        </table>
+        <table align="center" id="order" class="order-table">
+            <caption class="cap">Order:</caption>
+            <tr>
+                <th>Item</th><th>Buy Quantity</th><th>Total</th><th class="remove-td">Remove</th>
+            </tr>
+        </table>
+    </body>
+</html>

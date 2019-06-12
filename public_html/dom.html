@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #list {
+                width: 150px;
+            }
+        </style>
+        <script type="text/javascript">
+            function fnAdd() {
+                var text = document.getElementById("text").value;
+                var list = document.getElementById("list");
+                var area = document.getElementById("area");
+                if (text !== "")
+                {
+                    var option = document.createElement("option");
+                    var flag = 0;
+                    for (var i = 0; i < list.length; i++) {
+                        if (list[i].value === text) {
+                            flag = 1;
+                            break;
+                        }
+                    }
+                    if (flag === 1) {
+                        alert('Duplicate value, Please enter a new one.');
+                    } else {
+                        option.text = text;
+                        option.id = "op" + list.length;
+                        option.value = "op" + list.length;
+                        list.add(option);
+                        list.selectedIndex = list.options.length - 1;
+                        if (list.options.length === 1)
+                            area.innerHTML = text + "\n";
+                        else
+                            area.innerHTML += text + "\n";
+                    }
+                }
+            }
+            function fnAppend() {
+                var list = document.getElementById("list");
+                var area = document.getElementById("area");
+//                var lines = area.innerHTML.split("\n");
+                var select = list.options[list.selectedIndex].text;
+                area.innerHTML += select + "\n";
+            }
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires;
+//                        + ";path=/";
+            }
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function checkCookie() {
+                var username = getCookie("username");
+                if (username !== "") {
+                    alert("Welcome " + username);
+                } else {
+                    username = prompt("pick name:", "");
+                    if (username !== "" && username !== null) {
+                        setCookie("username", username, 365);
+                    }
+                }
+            }
+            function delCookie(cname) {
+                document.cookie = cname + "=" + "" + ";" + "expires=Thu, 01 Jan 1970 00:00:01 GMT";
+//                        + ";path=/";
+            }
+            function initColor() {
+                checkCookie();
+                var bg_color = getCookie("bgcolor");
+                if (bg_color !== "") {
+                    document.body.style.backgroundColor = bg_color;
+                } else {
+                    bg_color = prompt("pick background color:", "");
+                    if (bg_color !== "" && bg_color !== null) {
+                        setCookie("bgcolor", bg_color, 365);
+                        document.body.style.backgroundColor = bg_color;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="initColor()">
+        <input type="text" id="text"><input type="button" value="Add" onclick="fnAdd()"><br/>
+        <select id="list" size="6" onChange="fnAppend()">
+        </select><br/>
+        <textarea id="area" cols="20" rows="20">
+        </textarea><br/>
+        <input type="button" value="Delete Color Cookie" onclick="delCookie('bgcolor')"/>
+        <input type="button" value="Delete User Cookie" onclick="delCookie('username')"/>
+    </body>
+</html>
