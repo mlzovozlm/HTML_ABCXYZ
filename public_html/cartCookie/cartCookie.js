@@ -10,6 +10,7 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires;
 //                        + ";path=/";
 }
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -41,12 +42,17 @@ function addRow(item, buyQuantity) {
     var list = document.getElementById("order");
     var row = list.insertRow();
     row.id = "order" + item;
+
     var cell0 = row.insertCell(0);
     cell0.innerHTML = item;
+
     var cell1 = row.insertCell(1);
     cell1.innerHTML = buyQuantity;
+
     var cell2 = row.insertCell(2);
-    cell2.innerHTML = (buyQuantity * 5000) + "<u>đ</u>";
+    var totalCost = buyQuantity * 5000;
+    cell2.innerHTML = totalCost.toLocaleString() + "<sup><u>đ</u></sup>";
+
     var cell3 = row.insertCell(3);
     cell3.class = "remove-td";
     cell3.innerHTML =
@@ -57,11 +63,15 @@ function removeItem(Rid, item) {
     delCookie(item);
     var row = document.getElementById(Rid);
     row.parentNode.removeChild(row);
-    location.reload(true);
 }
+
 
 function addItem(item, inputQuantity) {
     var buyQuantity = Number(document.getElementById(inputQuantity).value);
+    if (buyQuantity % 1 !== 0) {
+        alert("Input Integer from 1 to 100!");
+        return;
+    }
     if (buyQuantity > 0 && buyQuantity <= 100) {
         var quantity = Number(getCookie(item));
         if (quantity !== 0) {
@@ -69,13 +79,14 @@ function addItem(item, inputQuantity) {
             if (total > 100) {
                 alert("Can only order maximum of 100!");
                 return;
-            } else
+            } else {
                 setCookie(item, total, 1);
+                location.reload(true);
+            }
         } else {
             setCookie(item, buyQuantity, 1);
             addRow(item, buyQuantity);
         }
-        location.reload(true);
     } else {
 //                    var v = "&amp; abc";
 //                    v = v.replace("&amp;", "&");
