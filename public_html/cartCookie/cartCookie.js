@@ -10,7 +10,11 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires;
 //                        + ";path=/";
 }
-
+function addJSON(item, quantity) {
+    var jsonItem = {item: item, quantity: quantity};
+    var strObj = JSON.stringify(jsonItem);
+    setCookie(item, strObj, 1);
+}
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -27,7 +31,13 @@ function getCookie(cname) {
 }
 
 function checkCookie(item) {
-    var buyQuantity = Number(getCookie(item));
+//    var buyQuantity = Number(getCookie(item)); //old version without JSON
+    var jsonStr = getCookie(item);
+    if (jsonStr === "" || jsonStr === null) {
+        return;
+    }
+    var jsonItem = JSON.parse(jsonStr);
+    var buyQuantity = Number(jsonItem.quantity);
     if (buyQuantity !== 0) {
         addRow(item, buyQuantity);
     } else {
@@ -73,19 +83,31 @@ function addItem(item, inputQuantity) {
         return;
     }
     if (buyQuantity > 0 && buyQuantity <= 100) {
-        var quantity = Number(getCookie(item));
-        if (quantity !== 0) {
-            var total = buyQuantity + quantity;
-            if (total > 100) {
-                alert("Can only order maximum of 100!");
-                return;
-            } else {
-                setCookie(item, total, 1);
-                location.reload(true);
-            }
-        } else {
-            setCookie(item, buyQuantity, 1);
+//        var quantity = Number(getCookie(item)); //old version without JSON
+        var jsonStr = getCookie(item);
+        alert(jsonStr); // debug
+        if (jsonStr === "" || jsonStr === null) {
+//            setCookie(item, buyQuantity, 1); //old version without JSON
+            addJSON(item, buyQuantity);
             addRow(item, buyQuantity);
+        } else {
+            var jsonItem = JSON.parse(jsonStr);
+            var quantity = Number(jsonItem.quantity);
+            if (quantity !== 0) {
+                var total = buyQuantity + quantity;
+                if (total > 100) {
+                    alert("Can only order maximum of 100!");
+                    return;
+                } else {
+//                setCookie(item, total, 1); //old version without JSON
+                    addJSON(item, total);
+                    location.reload(true);
+                }
+            } else {
+//            setCookie(item, buyQuantity, 1); //old version without JSON
+                addJSON(item, buyQuantity);
+                addRow(item, buyQuantity);
+            }
         }
     } else {
 //                    var v = "&amp; abc";
