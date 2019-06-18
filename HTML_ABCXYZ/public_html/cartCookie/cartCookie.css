@@ -7,8 +7,30 @@ and open the template in the editor.
     Created on : Jun 12, 2019, 7:16:47 PM
     Author     : Bao Anh Luu
 */
+/*table*/
 .cap{
     background-color:#fc9f13 ;
+}
+/*item table*/
+.item-td{
+    text-align: center;
+}
+.img-item{
+    max-width: 100%;
+    width: auto;
+}
+.item-table{
+    width: 90%;
+}
+
+/*order table*/
+.order-table{
+    border-collapse: collapse;
+    width: 70%;
+}
+.order-table th{
+    border-left: 1px solid;
+    border-right: 1px solid;
 }
 .order-table tr{
     border-top: 1px solid;
@@ -18,20 +40,10 @@ and open the template in the editor.
     border-left: 1px solid;
     border-right: 1px solid;
 }
-.item-td{
-    text-align: center;
-}
-.order-table th{
-    border-left: 1px solid;
-    border-right: 1px solid;
-}
-.order-table{
-    border-collapse: collapse;
-    width: 70%;
-}
 .remove-td{
     width: 1%;
 }
+/*checkout button*/
 .divBtn{
    text-align: center;
 }
