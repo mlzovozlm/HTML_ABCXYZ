@@ -26,6 +26,8 @@ function getCookie(cname) {
 }
 var demoArrayJSON = [{name: "item1", quantity: "quantity1"}, {name: "item2", quantity: "quantity2"}];
 function addtoCookie() {
+    var element = {name: "item3", quantity: "quantity3"};
+    demoArrayJSON.push(element);
     var all = JSON.stringify(demoArrayJSON);
     alert(all);
     setCookie("all", all, 1);

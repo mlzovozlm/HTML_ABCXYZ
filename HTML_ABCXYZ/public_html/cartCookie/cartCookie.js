@@ -48,6 +48,16 @@ function delCookie(cname) {
 //                        + ";path=/";
 }
 
+function hideShowBtn() {
+    var list = document.getElementById("order");
+    var rowCount = Number(list.getElementsByTagName("tr").length);
+    var btnCheckOut = document.getElementById("checkOut");
+    if (rowCount === 1) {
+        btnCheckOut.style.visibility = "hidden";
+    } else {
+        btnCheckOut.style.visibility = "visible";
+    }
+}
 function addRow(item, buyQuantity) {
     var list = document.getElementById("order");
     var row = list.insertRow();
@@ -68,11 +78,15 @@ function addRow(item, buyQuantity) {
     cell3.innerHTML =
             "<input type=\"button\" \n\
         value=\"Remove\" onclick=\"removeItem(\'" + row.id + "\',\'" + item + "\')\">";
+
+    hideShowBtn();
 }
+
 function removeItem(Rid, item) {
     delCookie(item);
     var row = document.getElementById(Rid);
     row.parentNode.removeChild(row);
+    hideShowBtn();
 }
 
 
@@ -115,6 +129,9 @@ function addItem(item, inputQuantity) {
         alert("Re-Enter Quantity! 0 < Quantity <= 100!");
     }
 }
+function checkOut() {
+    alert(getCookie('Coca') + "\n" + getCookie('Pepsi') + "\n" + getCookie('Fanta') + "\n" + getCookie('7Up'));
+}
 function load() {
     checkCookie('Coca');
     //delCookie('Coca');
@@ -128,6 +145,8 @@ function load() {
     checkCookie('7Up');
     //delCookie('7Up');
     //removeItem('order7Up', '7Up');
+    
+    hideShowBtn();
 }
 
 
