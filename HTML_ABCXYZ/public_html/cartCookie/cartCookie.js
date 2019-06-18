@@ -70,8 +70,10 @@ function addRow(item, buyQuantity) {
     cell1.innerHTML = buyQuantity;
 
     var cell2 = row.insertCell(2);
-    var totalCost = buyQuantity * 5000;
-    cell2.innerHTML = totalCost.toLocaleString() + "<sup><u>đ</u></sup>";
+    var price = Number(document.getElementById("price" + item).innerHTML);
+    var totalCost = buyQuantity * price;
+//    cell2.innerHTML = totalCost.toLocaleString() + "<sup><u>đ</u></sup>";
+    cell2.innerHTML = totalCost + "<sup><u>đ</u></sup>";
 
     var cell3 = row.insertCell(3);
     cell3.class = "remove-td";
