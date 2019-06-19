@@ -16,7 +16,9 @@ and open the template in the editor.
     <body>
         <div class="container">
             <div id="screen">0</div>
+            <input type="button" value="Debug" class="btn" id="btnDebug" onclick="showHideDebug()">
             <input type="button" value="AC" class="btn" id="btnAC" onclick="clickAC()">
+            <input type="button" value="%" class="btn" id="btnPct" onclick="clickPct()">
             <input type="button" value="+" class="btn" id="btnPlus" onclick="clickOperator(1)"><br>
             <input type="button" value="7" class="btn" id="btn7" onclick="clickNum(7)">
             <input type="button" value="8" class="btn" id="btn8" onclick="clickNum(8)">
@@ -35,10 +37,10 @@ and open the template in the editor.
             <input type="button" value="+/-" class="btn" id="btnReverse" onclick="clickReverse()">
             <input type="button" value="=" class="btn" id="btnEqual" onclick="clickEqual()">
         </div>
-        <div class="container">
-            num1: <div id="num1Debug">0</div>
-            process: <div id="processDebug">false</div> 
-            operator: <div id="operatorDebug">-1</div>
+        <div id="Debug" class="container">
+            num1: <label id="num1Debug">0</label><br>
+            process: <label id="processDebug">false</label><br> 
+            operator: <label id="operatorDebug">-1</label>
         </div>
     </body>
 </html>

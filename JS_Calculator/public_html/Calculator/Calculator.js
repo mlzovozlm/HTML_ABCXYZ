@@ -6,6 +6,16 @@
 var num1 = 0;
 var process = false;
 var operator = -1;
+
+function showHideDebug() {
+    var debugDiv = document.getElementById("Debug");
+    if (debugDiv.style.visibility === "visible") {
+        debugDiv.style.visibility = "hidden";
+    } else {
+        debugDiv.style.visibility = "visible";
+    }
+}
+
 function innerReset() { //done
     var num1Debug = document.getElementById("num1Debug");
     var processDebug = document.getElementById("processDebug");
@@ -17,6 +27,15 @@ function innerReset() { //done
     operator = -1;
     operatorDebug.innerHTML = operator;
 }
+
+function clickPct() {
+    var screen = document.getElementById("screen");
+    if (process === true) {
+        var num = screen.innerHTML / 100;
+        screen.innerHTML = num;
+    }
+}
+
 function clickAC() { //done
     var screen = document.getElementById("screen");
     innerReset();
