@@ -67,7 +67,6 @@ function clickDot() { //done
         process = true;
         processDebug.innerHTML = true;
     }
-    document.getElementById("btnDot").disabled = true;
 }
 function clickOperator(operate) { //done
     var num1Debug = document.getElementById("num1Debug");
