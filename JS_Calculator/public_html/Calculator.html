@@ -10,26 +10,35 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Calculator/Calculator.css">
-        <script src="Calculator/Calculator.css">
+        <script src="Calculator/Calculator.js">
         </script>
     </head>
     <body>
-        <div>0</div>
-        <input type="button" value="7" class="btn" id="btn7">
-        <input type="button" value="8" class="btn" id="btn8">
-        <input type="button" value="9" class="btn" id="btn9">
-        <input type="button" value="+" class="btn" id="btnPlus"><br>
-        <input type="button" value="4" class="btn" id="btn4">
-        <input type="button" value="5" class="btn" id="btn5">
-        <input type="button" value="6" class="btn" id="btn6">
-        <input type="button" value="-" class="btn" id="btnMinus"><br>
-        <input type="button" value="1" class="btn" id="btn1">
-        <input type="button" value="2" class="btn" id="btn2">
-        <input type="button" value="3" class="btn" id="btn3">
-        <input type="button" value="x" class="btn" id="btnMulti"><br>
-        <input type="button" value="0" class="btn" id="btn0">
-        <input type="button" value="." class="btn" id="btnDot">
-        <input type="button" value="=" class="btn" id="btnEqual">
-        <input type="button" value="/" class="btn" id="btnDiv">
+        <div class="container">
+            <div id="screen">0</div>
+            <input type="button" value="AC" class="btn" id="btnAC" onclick="clickAC()">
+            <input type="button" value="+" class="btn" id="btnPlus" onclick="clickOperator(1)"><br>
+            <input type="button" value="7" class="btn" id="btn7" onclick="clickNum(7)">
+            <input type="button" value="8" class="btn" id="btn8" onclick="clickNum(8)">
+            <input type="button" value="9" class="btn" id="btn9" onclick="clickNum(9)">
+            <input type="button" value="-" class="btn" id="btnMinus" onclick="clickOperator(2)"><br>
+            <input type="button" value="4" class="btn" id="btn4" onclick="clickNum(4)">
+            <input type="button" value="5" class="btn" id="btn5" onclick="clickNum(5)">
+            <input type="button" value="6" class="btn" id="btn6" onclick="clickNum(6)">
+            <input type="button" value="x" class="btn" id="btnMulti" onclick="clickOperator(3)"><br>
+            <input type="button" value="1" class="btn" id="btn1" onclick="clickNum(1)">
+            <input type="button" value="2" class="btn" id="btn2" onclick="clickNum(2)">
+            <input type="button" value="3" class="btn" id="btn3" onclick="clickNum(3)">
+            <input type="button" value="/" class="btn" id="btnDiv" onclick="clickOperator(4)"><br>
+            <input type="button" value="0" class="btn" id="btn0" onclick="clickNum(0)">
+            <input type="button" value="." class="btn" id="btnDot" onclick="clickDot()">
+            <input type="button" value="+/-" class="btn" id="btnReverse" onclick="clickReverse()">
+            <input type="button" value="=" class="btn" id="btnEqual" onclick="clickEqual()">
+        </div>
+        <div class="container">
+            num1: <div id="num1Debug">0</div>
+            process: <div id="processDebug">false</div> 
+            operator: <div id="operatorDebug">-1</div>
+        </div>
     </body>
 </html>

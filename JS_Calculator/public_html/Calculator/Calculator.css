@@ -7,14 +7,18 @@ and open the template in the editor.
     Created on : Jun 18, 2019, 10:21:41 PM
     Author     : Bao Anh Luu
 */
-div{
+.container{
+    float: left;
+    margin-left: 5px;
+}
+#screen{
     width: 200px;
     text-align: right;
     border: 1px solid;
     padding-right: 10px;
 }
 .btn{
-    
+
 }
 input[type=button]{
     text-align: center;
