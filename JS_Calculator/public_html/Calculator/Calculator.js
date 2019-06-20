@@ -31,7 +31,7 @@ function innerReset() { //done
 function clickPct() {
     var screen = document.getElementById("screen");
     if (process === true) {
-        var num = screen.innerHTML / 100;
+        var num = (screen.innerHTML / 100).toFixed(5);
         screen.innerHTML = num;
     }
 }
@@ -124,18 +124,18 @@ function clickEqual() { //done
         switch (operator) {
             case 1:
                 num1 = eval(num1 + num2);
-                screen.innerHTML = num1;
-                num1Debug.innerHTML = num1;
+                screen.innerHTML = num1.toFixed(5);
+                num1Debug.innerHTML = num1.toFixed(5);
                 break;
             case 2:
                 num1 = eval(num1 - num2);
-                screen.innerHTML = num1;
-                num1Debug.innerHTML = num1;
+                screen.innerHTML = num1.toFixed(5);
+                num1Debug.innerHTML = num1.toFixed(5);
                 break;
             case 3:
                 num1 *= num2;
-                screen.innerHTML = num1;
-                num1Debug.innerHTML = num1;
+                screen.innerHTML = num1.toFixed(5);
+                num1Debug.innerHTML = num1.toFixed(5);
                 break;
             case 4:
                 if (num2 === 0) {
@@ -143,8 +143,8 @@ function clickEqual() { //done
                     innerReset();
                 } else {
                     num1 /= num2;
-                    screen.innerHTML = num1;
-                    num1Debug.innerHTML = num1;
+                    screen.innerHTML = num1.toFixed(5);
+                    num1Debug.innerHTML = num1.toFixed(5);
                 }
                 break;
         }
