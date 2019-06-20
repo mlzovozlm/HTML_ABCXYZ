@@ -31,8 +31,8 @@ function innerReset() { //done
 function clickPct() {
     var screen = document.getElementById("screen");
     if (process === true) {
-        var num = (screen.innerHTML / 100).toFixed(5);
-        screen.innerHTML = num;
+        var num = screen.innerHTML / 100;
+        screen.innerHTML = num.toFixed(5);
     }
 }
 
