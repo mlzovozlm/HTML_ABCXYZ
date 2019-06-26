@@ -1,0 +1,115 @@
+/*-----default tag setting------*/
+body{
+    margin: 0;
+    /*width: 1000px;*/
+    padding: 0;
+    background: #787878;
+}
+a {
+    color: #8C0209;
+}
+iframe {
+    border: 0;
+}
+/*------------------------------*/
+
+.mainContainer {
+    color: #8C0209; 
+    width: 990px; 
+    margin: 0 auto;
+    background-color: #FFFFFF; 
+    padding: 5px 5px 0px 5px;
+}
+/*----sidebar-------------------*/
+#sidebarcontainer {
+    width: 220px;
+    font-size: 12px;
+    float: left;
+}
+.sidebar-frame{
+    height: 300px;
+    width: 100%;
+}
+.sidemenu {
+    font-size: 14px;
+    height: 40px;
+    color: #FFFFFF;
+    padding: 0px 5px 0px 5px;
+    background:#8C0209;
+    -moz-border-radius-topleft:20px;
+    -webkit-border-radius-topleft:20px; 
+    -ms-border-radius-topleft:20px; 
+    border-top-left-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    -webkit-border-radius-bottomright:20px; 
+    -ms-border-radius-bottomright:20px; 
+    border-bottom-right-radius:20px;
+    background: -webkit-linear-gradient(#aa0514, #6e0001);
+    background: -o-linear-gradient(#aa0514, #6e0001); 
+    background: -moz-linear-gradient(#aa0514, #6e0001); 
+    background: linear-gradient(#d00618, #6e0001);
+}
+.sidebarcontent {
+    text-align: center; 
+    background-color: #FFFFFF;
+}
+.bodyEncase {
+    border: 1px solid #8c0209;
+    -ms-border-radius-topleft:20px; 
+    border-top-left-radius:20px;
+    margin: 0;
+}
+
+
+/*-----maincontent HomePage------*/
+#maincontent {
+    float: left; 
+    width: 770px; 
+    background-color: #FFFFFF;
+}
+
+/*-----menu title--------*/
+.menutitle {
+    margin-top: 15px;
+    padding-left:20px; 
+    padding-top:5px; 
+    background-color:#8C0209; 
+    color:#FFFFFF; 
+    height:30px;
+    background: -webkit-linear-gradient(left, #6e0001, #aa0514); 
+    background: -o-linear-gradient(right, #6e0001, #aa0514); 
+    background: -moz-linear-gradient(right, #6e0001, #aa0514); 
+    background: linear-gradient(to right,#6e0001, #e20a1d);
+}
+/*-----------------------*/
+
+/*--------individual attr------------------*/
+/*background*/
+.bg-none {
+    background: none;
+}
+/*color*/
+.dark-red {
+    color: #8C0209;
+}
+/*text size*/
+.text-200{
+    font-size: 200%;
+}
+/*text deco*/
+.text-none {
+    text-decoration: none;
+}
+/*padding*/
+.pl-10 {
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+

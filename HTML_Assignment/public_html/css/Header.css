@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 26, 2019, 9:44:56 PM
+    Author     : Bao Anh Luu
+*/
+
+#logo {
+    width:1000px;
+    height:160px;
+    padding-top: 20px;
+    text-shadow: 3px 3px 3px #b9a698;
+    background-color:#FFFFFF; 
+    -moz-border-radius-topleft:30px;
+    -webkit-border-radius-topleft:30px; 
+    -ms-border-radius-topleft:30px; 
+    border-top-left-radius:30px;
+}
+#logo div {
+    font-size: 14px;
+    float:right;
+    color:#8C0209;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+#header {
+    width:1000px;
+    height:100px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+#menuContainer {
+	width: 990px; 
+	margin: 0 auto;
+	padding: 0px 5px 0px 5px;
+	
+	-moz-border-radius-topleft:20px;
+	-webkit-border-radius-topleft:20px; 
+	-ms-border-radius-topleft:20px; 
+	border-top-left-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	-webkit-border-radius-bottomright:20px; 
+	-ms-border-radius-bottomright:20px; 
+	border-bottom-right-radius:20px;
+	
+	background: -webkit-linear-gradient(#aa0514, #6e0001);
+	background: -o-linear-gradient(#aa0514, #6e0001); 
+	background: -moz-linear-gradient(#aa0514, #6e0001); 
+	background: linear-gradient(#d00618, #6e0001);
+}
+/*--------------------*/
+#mainMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#mainMenu li {
+    float: left;
+}
+#mainMenu li a {
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#mainMenu li a:hover {
+    background-color: #630207;
+    -moz-border-radius-topleft:20px;
+    -webkit-border-radius-topleft:20px; 
+    -ms-border-radius-topleft:20px; 
+    border-top-left-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    -webkit-border-radius-bottomright:20px; 
+    -ms-border-radius-bottomright:20px; 
+    border-bottom-right-radius:20px;
+}
+/*--------------------*/
+.search {
+    margin-left: 300px;
+}
+#txtSearch {
+    width: 180px;
+    height: 25px; 
+    border: 1px solid #CA8186; 
+    font-style: italic; 
+    color: #787878;
+}
+#btnSearch {
+    height:25px; 
+    position:relative;
+    top:8px;
+    width: 23px;
+    border: none;
+}
+/*-------------cart-----------*/
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    /*margin-left: -10px;*/
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  background-color: #c67605;
+}
+
