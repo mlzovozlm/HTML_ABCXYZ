@@ -14,6 +14,7 @@ iframe {
 /*------------------------------*/
 
 .mainContainer {
+    display: flex;
     color: #8C0209; 
     width: 990px; 
     margin: 0 auto;
@@ -49,6 +50,9 @@ iframe {
     background: -moz-linear-gradient(#aa0514, #6e0001); 
     background: linear-gradient(#d00618, #6e0001);
 }
+.titlesidebar {
+    padding: 10px 0 0 10px;
+}
 .sidebarcontent {
     text-align: center; 
     background-color: #FFFFFF;
@@ -63,14 +67,15 @@ iframe {
 
 /*-----maincontent HomePage------*/
 #maincontent {
-    float: left; 
+    padding: 0 0 10px 5px;
+    float: left;
     width: 770px; 
     background-color: #FFFFFF;
 }
 
 /*-----menu title--------*/
 .menutitle {
-    margin-top: 15px;
+    margin-bottom: 10px;
     padding-left:20px; 
     padding-top:5px; 
     background-color:#8C0209; 
