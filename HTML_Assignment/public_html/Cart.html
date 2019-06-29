@@ -7,6 +7,10 @@
         <link rel="stylesheet" type="text/css" href="css/Cart.css">
         <link rel="stylesheet" type="text/css" href="css/Footer.css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="js/Main.js">
+        </script>
+        <script type="text/javascript" src="js/Cart.js">
+        </script>
     </head>
     <body>
         <header id="header"> 
@@ -20,9 +24,11 @@
                 <nav>
                     <ul id="mainMenu">
                         <li><a href="Home.html">Home</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Cart <span class='badge' id='lblCartCount'>0</span></a></li>
+                        <li><a href="Register.html">Register</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="Cart.html">Cart <span class='badge' id='lblCartCount'>0</span></a></li>
+                        <li id="btnToManage"><a href="Manage.html">Manage</a></li>
+                        <li id="btnToSystem"><a href="System.html">System</a></li>
                         <li><div class="search">
                                 <input type="text" id="txtSearch" placeholder="  Keyword">
                                 <input type="image" id="btnSearch" title="Search" src="images/Search2.png"/>
@@ -39,7 +45,7 @@
                     <iframe class="sidebar-frame" src="Statistic.html" name="Statistic"></iframe>
                 </div>
             </div>
-            <div id="maincontent">
+            <div id="maincontent"> <!---Form here--->
                 <div>
                     <div class="menutitle">
                         &loz; Something Something
@@ -51,7 +57,7 @@
                         &loz; Something Something
                     </div>
                 </div>
-            </div>
+            </div> <!---Form here--->
         </div>
         <footer id="footer">
             <div id="copyright">&copy; 2019 All Rights Reserved &bull; Design by <a href="#">ABCXYZ</a></div>

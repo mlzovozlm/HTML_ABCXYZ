@@ -1,3 +1,5 @@
+/*-----------------------------DO NOT MODIFY--------------------------------------*/
+
 /*-----default tag setting------*/
 body{
     margin: 0;
@@ -11,7 +13,7 @@ a {
 iframe {
     border: 0;
 }
-/*------------------------------*/
+/*----page body-----------------*/
 
 .mainContainer {
     display: flex;
@@ -21,7 +23,7 @@ iframe {
     background-color: #FFFFFF; 
     padding: 5px 5px 0px 5px;
 }
-/*----sidebar-------------------*/
+/*----sidebar shared setting------------*/
 #sidebarcontainer {
     width: 215px;
     font-size: 12px;
@@ -65,7 +67,7 @@ iframe {
 }
 
 
-/*-----maincontent HomePage------*/
+/*-----page maincontent------*/
 #maincontent {
     padding: 0 0 10px 5px;
     float: left;
@@ -110,11 +112,7 @@ iframe {
     padding-left: 10px;
 }
 
+/*-----------------------------DO NOT MODIFY--------------------------------------*/
 
-
-
-
-
-
-
+/*---------------------------ADD CONTENT BELOW THIS-------------------------------*/
 
