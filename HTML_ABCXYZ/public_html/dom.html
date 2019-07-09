@@ -33,8 +33,8 @@ and open the template in the editor.
                         alert('Duplicate value, Please enter a new one.');
                     } else {
                         option.text = text;
-                        option.id = "op" + list.length;
-                        option.value = "op" + list.length;
+                        option.id = "op" + list[i];
+                        option.value = "op" + list[i];
                         list.add(option);
                         list.selectedIndex = list.options.length - 1;
                         if (list.options.length === 1)

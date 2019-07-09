@@ -7,4 +7,25 @@ and open the template in the editor.
     Created on : Jun 27, 2019, 4:34:40 PM
     Author     : Bao Anh Luu
 */
+.registerContain{
+    overflow: auto;
+}
+.registerContain td{
+    padding-bottom: 5px;
+}
+.registerLeft{
+    float: left;
+    width: 55%;
+    border-right: 1px solid #aa0514;
+}
 
+.registerRight{
+    float: left;
+    margin-left: 5px;
+    width: 40%;
+}
+.pinDiv{
+    padding-top: 10px;
+    clear: both;
+    text-align: center;
+}

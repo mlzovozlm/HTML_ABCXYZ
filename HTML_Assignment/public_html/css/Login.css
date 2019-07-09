@@ -7,4 +7,20 @@ and open the template in the editor.
     Created on : Jun 27, 2019, 4:38:01 PM
     Author     : Bao Anh Luu
 */
+.loginContain{
+    overflow: auto;
+}
+.loginContain td{
+    padding-bottom: 5px;
+}
+.Login{
+    float: left;
+    width: 55%;
+    border-right: 1px solid #aa0514;
+}
 
+.Forgot{
+    float: left;
+    margin-left: 5px;
+    width: 40%;
+}

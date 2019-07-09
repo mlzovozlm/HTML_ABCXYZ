@@ -12,10 +12,10 @@
         <script type="text/javascript" src="js/Register.js">
         </script>
     </head>
-    <body>
+    <body onload="initPage()">
         <header id="header"> 
             <div id="logo">
-                <img src="images/Logo.gif" alt="logo"><b class="text-200">Shop <span class="dark-red">ABCXYZ</span></b> EFG
+                <img src="images/Logo.gif" alt="logo"><b class="text-200p">Shop <span class="dark-red">ABCXYZ</span></b> EFG
                 <div><a href="mailto:webmaster@example.com" class="text-none"><img src="images/Email.gif" alt="email"> Contact</a></div>
             </div>
         </header>
@@ -46,16 +46,74 @@
                 </div>
             </div>
             <div id="maincontent"> <!---Form here--->
-                <div>
+                <div class="registerContain">
                     <div class="menutitle">
-                        &loz; Something Something
+                        &loz; Register
                     </div>
-                </div>
-                
-                <div>
-                    <div class="menutitle">
-                        &loz; Something Something
-                    </div>
+                    <form id="registerForm" action="" method="post" onsubmit="return submitReg()">
+                        <div class="registerLeft">
+                            <div class="text-20 bold mb-5">Register:</div>
+                            <table>
+                                <tr>
+                                    <td>Username*:</td>
+                                    <td><input type="text" id="regUser" placeholder="Enter Username" required></td>
+                                    <td><input type="button" value="Check" onclick="checkRegUsername()"></td>
+                                </tr>
+                                <tr>
+                                    <td>Email*:</td>
+                                    <td><input type="email" id="regEmail" placeholder="Enter Email" required></td>
+                                    <td><input type="button" value="Check" onclick="checkRegEmail()"></td>
+                                </tr>
+                                <tr>
+                                    <td>Password*:</td>
+                                    <td><input type="password" id="regPass" placeholder="Enter Password" required></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Re-Enter*:</td>
+                                    <td><input type="password" id="regRePass" placeholder="Re-Enter Password" required></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="registerRight">
+                            <div class="text-20 bold mb-5">Additional Info:</div>
+                            <table>
+                                <tr>
+                                    <td>Name*:</td>
+                                    <td><input type="text" id="regName" placeholder="Enter Name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Tel*:</td>
+                                    <td><input type="tel" id="regTel" placeholder="Enter Tel" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Address*:</td>
+                                    <td><input type="text" id="regAddress" placeholder="Enter Address" required></td>
+                                </tr>
+                                <tr>
+                                    <td>City*:</td>
+                                    <td>
+                                        <select id="regCity" onchange="addDistrict()">
+                                            <option value="0" selected>--Choose City--</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>District*:</td>
+                                    <td>
+                                        <select id="regDistrict">
+                                            <option value="0" selected>--Choose District--</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pinDiv">
+                            PIN: <input type="text" placeholder="Enter PIN" required> <img src="#"><br>
+                            <input type="submit" value="Register">
+                        </div>
+                    </form>
                 </div>
             </div> <!---Form here--->
         </div>

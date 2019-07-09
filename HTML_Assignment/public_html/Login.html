@@ -15,7 +15,7 @@
     <body>
         <header id="header"> 
             <div id="logo">
-                <img src="images/Logo.gif" alt="logo"><b class="text-200">Shop <span class="dark-red">ABCXYZ</span></b> EFG
+                <img src="images/Logo.gif" alt="logo"><b class="text-200p">Shop <span class="dark-red">ABCXYZ</span></b> EFG
                 <div><a href="mailto:webmaster@example.com" class="text-none"><img src="images/Email.gif" alt="email"> Contact</a></div>
             </div>
         </header>
@@ -46,17 +46,45 @@
                 </div>
             </div>
             <div id="maincontent"> <!---Form here--->
-                <div>
+                <div class="loginContain">
                     <div class="menutitle">
-                        &loz; Something Something
+                        &loz; Login
+                    </div>
+                    <div class="Login">
+                        <div class="text-20 bold mb-5">Login:</div>
+                        <form id="loginForm" action="" method="post" onsubmit="return submitLogin()">
+                            <table>
+                                <tr>
+                                    <td>Username:</td>
+                                    <td><input type="text" id="loginUser" placeholder="Enter Username" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Password:</td>
+                                    <td><input type="password" id="loginPass" placeholder="Enter Password" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" value="Login"></td>
+                                    <td><input type="button" onclick="directToRegister()" value="Register"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="Forgot">
+                        <div class="text-20 bold mb-5">Forgot Password:</div>
+                        <form id="forgotForm" action="" method="post" onsubmit="return submitForgot()">
+                            <table>
+                                <tr>
+                                    <td>Username:</td>
+                                    <td><input type="text" id="forgotUser" placeholder="Enter Username" required></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="submit" value="Send Email"></td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
                 </div>
-                
-                <div>
-                    <div class="menutitle">
-                        &loz; Something Something
-                    </div>
-                </div>
+
             </div> <!---Form here--->
         </div>
         <footer id="footer">

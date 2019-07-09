@@ -91,27 +91,66 @@ iframe {
 /*-----------------------*/
 
 /*--------individual attr------------------*/
+/*clear*/
+.clear-both{
+    clear: both;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /*background*/
 .bg-none {
     background: none;
 }
+
+
 /*color*/
 .dark-red {
     color: #8C0209;
 }
+
+/*text align*/
+.text-center{
+    text-align: center;
+}
+/*text weight*/
+.bold{
+    font-weight: bold;
+}
 /*text size*/
-.text-200{
+.text-20{
+    font-size: 20px;
+}
+.text-200p{
     font-size: 200%;
 }
 /*text deco*/
 .text-none {
     text-decoration: none;
 }
+
+
+
 /*padding*/
+.pb-3{
+    margin-bottom: 3px;
+}
+.pb-10{
+    margin-bottom: 10px;
+}
 .pl-10 {
     padding-left: 10px;
 }
-
+/*marign*/
+.mb-3{
+    margin-bottom: 3px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
 /*-----------------------------DO NOT MODIFY--------------------------------------*/
 
 /*---------------------------ADD CONTENT BELOW THIS-------------------------------*/
