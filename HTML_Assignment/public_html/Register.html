@@ -50,7 +50,7 @@
                     <div class="menutitle">
                         &loz; Register
                     </div>
-                    <form id="registerForm" action="" method="post" onsubmit="return submitReg()">
+                    <form id="registerForm" action="#" method="post" onsubmit="return submitReg()">
                         <div class="registerLeft">
                             <div class="text-20 bold mb-5">Register:</div>
                             <table>
@@ -110,7 +110,7 @@
                             </table>
                         </div>
                         <div class="pinDiv">
-                            PIN: <input type="text" placeholder="Enter PIN" required> <img src="#"><br>
+                            PIN: <input type="text" id="regPIN" placeholder="Enter PIN" required> <img src="#" id="PINImg" alt=""><input type="button" value="Other" onclick="otherPIN()"><br>
                             <input type="submit" value="Register">
                         </div>
                     </form>

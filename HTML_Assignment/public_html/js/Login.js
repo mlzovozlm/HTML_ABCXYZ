@@ -3,12 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*-----------------------------DO NOT MODIFY--------------------------------------*/
+
 function submitLogin() {
     //to-do
-    return false;
+    return true;
 }
 
 function submitForgot() {
     //to-do
-    return false;
+    return true;
 }
+function directToRegister() {
+    window.location.href = "Register.html";
+}
+/*-----------------------------DO NOT MODIFY--------------------------------------*/
+/*---------------------------ADD CONTENT BELOW THIS-------------------------------*/
