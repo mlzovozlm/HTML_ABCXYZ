@@ -4,15 +4,23 @@
  * and open the template in the editor.
  */
 /*-----------------------------DO NOT MODIFY--------------------------------------*/
-var productList = [ {id: "1", name: "item1", quantity: "quantity1", image: "item1"}, 
-                    {id: "2", name: "item2", quantity: "quantity2", image:"item2"}];
-var cartList = [ {id:"1", orderQuan:"1"}];
+var productList = [{id: "1", name: "item1", quantity: "quantity1", image: "item1"},
+    {id: "2", name: "item2", quantity: "quantity2", image: "item2"}];
+var cartList = [{id: "1", orderQuan: "1"}];
 
 var orderList = [];
 
 var staffList = [];
 
-
+window.onscroll = function () {
+    var header = document.getElementById("menuContainer");
+    var sticky = header.offsetTop;
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+};
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));

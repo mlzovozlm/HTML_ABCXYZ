@@ -1,9 +1,9 @@
-/* 
+﻿/* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function setCookie(cname, cvalue, exdays) {
+function setCookie(cname, cvalue, exdays) { // cookie = "cname = cvalue;" --> delete on browser close
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toUTCString();

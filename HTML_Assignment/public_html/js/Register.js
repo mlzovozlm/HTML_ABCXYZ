@@ -23,13 +23,16 @@ function initPage() {
     var i = 0;
     while (i < 6) {
         PINImg.alt += "" + Math.floor(Math.random() * 10);
+        i++;
     }
 }
 function otherPIN() {
     var PINImg = document.getElementById("PINImg");
+    PINImg.alt = "";
     var i = 0;
     while (i < 6) {
         PINImg.alt += "" + Math.floor(Math.random() * 10);
+        i++;
     }
 }
 
@@ -66,8 +69,10 @@ function submitReg() {
     }
 
     if (pin !== PINImg.alt) {
+        message += "Wrong PIN\n";
         valid = false;
     }
+    alert(message);
     return valid;
 }
 

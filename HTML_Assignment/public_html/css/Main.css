@@ -1,11 +1,12 @@
 /*-----------------------------DO NOT MODIFY--------------------------------------*/
 
 /*-----default tag setting------*/
-body{
-    margin: 0;
-    /*width: 1000px;*/
+body.main {
+    margin: 0 auto;
+    width: 1000px;
     padding: 0;
     background: #787878;
+    overflow: auto;
 }
 a {
     color: #8C0209;
@@ -13,12 +14,16 @@ a {
 iframe {
     border: 0;
 }
+
 /*----page body-----------------*/
+.wrap-all {
+    overflow: auto;
+    background: white;
+}
 
 .mainContainer {
     display: flex;
     color: #8C0209; 
-    width: 990px; 
     margin: 0 auto;
     background-color: #FFFFFF; 
     padding: 5px 5px 0px 5px;
@@ -88,7 +93,12 @@ iframe {
     background: -moz-linear-gradient(right, #6e0001, #aa0514); 
     background: linear-gradient(to right,#6e0001, #e20a1d);
 }
-/*-----------------------*/
+/*-------special effect---------*/
+.sticky {
+    position: fixed;
+    width: 990px; /*temporary*/
+    top: 0;
+}
 
 /*--------individual attr------------------*/
 /*clear*/
@@ -96,9 +106,9 @@ iframe {
     clear: both;
 }
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /*background*/
@@ -145,6 +155,9 @@ iframe {
     padding-left: 10px;
 }
 /*marign*/
+.ma-0{
+    margin: 0;
+}
 .mb-3{
     margin-bottom: 3px;
 }
