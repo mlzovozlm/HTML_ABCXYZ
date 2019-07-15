@@ -14,15 +14,20 @@
 //
 //var staffList = [];
 
-window.onscroll = function () {
+//note: sticky [navbar] requires placeholder container div so offsetTop + scrollY get maintained
+//<div><nav></nav></div> -> nav as sticky element, div as placeholder 
+window.onscroll = scroll;
+
+function scroll(){
     var header = document.getElementById("menuContainer");
-    var sticky = header.offsetHeight;
-    if (window.pageYOffset >= sticky) {
+    header.classList.remove("sticky");   
+    var stick = header.offsetTop;
+    if (window.scrollY >= stick) {
         header.classList.add("sticky");
     } else {
         header.classList.remove("sticky");
     }
-};
+}
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));

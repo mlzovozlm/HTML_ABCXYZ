@@ -36,23 +36,26 @@ and open the template in the editor.
 }
 
 /*----navigate--------------------*/
+#menu{
+    height: 46px;
+}
 #menuContainer {
-	margin: 0 auto;
-	padding: 0px 5px 0px 5px;
-	z-index: 100;
-	-moz-border-radius-topleft:20px;
-	-webkit-border-radius-topleft:20px; 
-	-ms-border-radius-topleft:20px; 
-	border-top-left-radius:20px;
-	-moz-border-radius-bottomright:20px;
-	-webkit-border-radius-bottomright:20px; 
-	-ms-border-radius-bottomright:20px; 
-	border-bottom-right-radius:20px;
-	
-	background: -webkit-linear-gradient(#aa0514, #6e0001);
-	background: -o-linear-gradient(#aa0514, #6e0001); 
-	background: -moz-linear-gradient(#aa0514, #6e0001); 
-	background: linear-gradient(#d00618, #6e0001);
+    margin: 0 auto;
+    padding: 0px 5px 0px 5px;
+    z-index: 100;
+    -moz-border-radius-topleft:20px;
+    -webkit-border-radius-topleft:20px; 
+    -ms-border-radius-topleft:20px; 
+    border-top-left-radius:20px;
+    -moz-border-radius-bottomright:20px;
+    -webkit-border-radius-bottomright:20px; 
+    -ms-border-radius-bottomright:20px; 
+    border-bottom-right-radius:20px;
+
+    background: -webkit-linear-gradient(#aa0514, #6e0001);
+    background: -o-linear-gradient(#aa0514, #6e0001); 
+    background: -moz-linear-gradient(#aa0514, #6e0001); 
+    background: linear-gradient(#d00618, #6e0001);
 }
 /*--------------------*/
 #mainMenu {
@@ -112,12 +115,12 @@ and open the template in the editor.
     /*margin-left: -10px;*/
 }
 .badge {
-  padding-left: 9px;
-  padding-right: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-  background-color: #c67605;
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background-color: #c67605;
 }
 
 /*-----------------------------DO NOT MODIFY--------------------------------------*/
