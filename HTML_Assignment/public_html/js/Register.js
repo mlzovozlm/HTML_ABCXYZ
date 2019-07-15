@@ -10,7 +10,8 @@ var districtList = {
     DaNang: ["District 1", "District 2", "District 3"]
 };
 
-function initPage() {
+function initRegPage() {
+    updateCartLabel();
     var cities = document.getElementById("regCity");
     var PINImg = document.getElementById("PINImg");
     for (var i = 0; i < cityList.length; i++) {

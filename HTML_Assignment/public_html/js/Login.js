@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 /*-----------------------------DO NOT MODIFY--------------------------------------*/
-
+function initLoginPage(){
+    updateCartLabel();
+}
 function submitLogin() {
     //to-do
     return true;

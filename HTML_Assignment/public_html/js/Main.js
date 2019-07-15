@@ -4,18 +4,20 @@
  * and open the template in the editor.
  */
 /*-----------------------------DO NOT MODIFY--------------------------------------*/
-var productList = [{id: "1", name: "item1", quantity: "quantity1", image: "item1"},
-    {id: "2", name: "item2", quantity: "quantity2", image: "item2"}];
-var cartList = [{id: "1", orderQuan: "1"}];
-
-var orderList = [];
-
-var staffList = [];
+//var productList = [
+//    {id: "1", name: "item1", quantity: "100", image: "images/item1.jpg"},
+//    {id: "2", name: "item2", quantity: "200", image: "images/item2.jpg"},
+//    {id: "3", name: "item3", quantity: "300", image: "images/item3.jpg"},
+//];
+//
+//var orderList = [];
+//
+//var staffList = [];
 
 window.onscroll = function () {
     var header = document.getElementById("menuContainer");
-    var sticky = header.offsetTop;
-    if (window.pageYOffset > sticky) {
+    var sticky = header.offsetHeight;
+    if (window.pageYOffset >= sticky) {
         header.classList.add("sticky");
     } else {
         header.classList.remove("sticky");
@@ -41,6 +43,10 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+function delCookie(cname) {
+    document.cookie = cname + "=" + "" + ";" + "expires=Thu, 01 Jan 1970 00:00:01 GMT";
+//                        + ";path=/";
 }
 
 

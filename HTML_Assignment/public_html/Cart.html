@@ -12,7 +12,7 @@
         <script type="text/javascript" src="js/Cart.js">
         </script>
     </head>
-    <body class="main">
+    <body class="main" onload="initCartPage()">
         <div class="wrap-all">
             <div id="header"> 
                 <div id="logo">
@@ -49,13 +49,21 @@
                 <div id="maincontent"> <!---Form here--->
                     <div>
                         <div class="menutitle">
-                            &loz; Something Something
+                            &loz; Cart List
                         </div>
-                    </div>
-
-                    <div>
-                        <div class="menutitle">
-                            &loz; Something Something
+                        <div>
+                            <table align="center" id="cart-table">
+                                <caption class="table-caption">Cart</caption>
+                                <tr>
+                                    <th class="w-100">Item</th>
+                                    <th class="w-100">Buy Quantity</th>
+                                    <th class="w-200">Price</th><th>Total</th>
+                                    <th class="remove-td">Remove</th>
+                                </tr>
+                            </table>
+                            <div class="divBtn"> 
+                                <input type="button" value="Check Out" id="checkOut" onclick="checkOut()">
+                            </div>
                         </div>
                     </div>
                 </div> <!---Form here--->
