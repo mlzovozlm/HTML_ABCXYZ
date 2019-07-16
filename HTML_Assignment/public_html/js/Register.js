@@ -60,7 +60,7 @@ function submitReg() {
                 + "at least 1 lowercase alphabetical character\n"
                 + "at least 1 uppercase alphabetical character"
                 + "at least 1 numeric character\n"
-                + "at least one special character(! @ # $ % ^ & *)\n"
+                + "at least 1 special character(! @ # $ % ^ & *)\n"
                 + "Password must be 8 characters or longer\n";
         valid = false;
     }
