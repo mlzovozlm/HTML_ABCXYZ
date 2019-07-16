@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop</title>
+        <link rel="stylesheet" type="text/css" href="css/Main.css">
+        <link rel="stylesheet" type="text/css" href="css/Header.css">
+        <link rel="stylesheet" type="text/css" href="css/ProductDetail.css">
+        <link rel="stylesheet" type="text/css" href="css/Footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="js/Main.js">
+        </script>
+        <script type="text/javascript" src="js/Cart.js">
+        </script>
+        <script type="text/javascript" src="js/ProductDetail.js">
+        </script>
+    </head>
+    <body class="main" onload="initDetailPage()">
+        <div class="wrap-all">
+            <div id="header"> 
+                <div id="logo">
+                    <img src="images/Logo.gif" alt="logo"><b class="text-200p">Shop <span class="dark-red">ABCXYZ</span></b> EFG
+                    <div><a href="mailto:webmaster@example.com" class="text-none"><img src="images/Email.gif" alt="email"> Contact</a></div>
+                </div>
+            </div>
+            <div id="menu"> 
+                <div id="menuContainer" class="">
+                    <nav>
+                        <ul id="mainMenu">
+                            <li><a href="Home.html">Home</a></li>
+                            <li><a href="Register.html">Register</a></li>
+                            <li><a href="Login.html">Login</a></li>
+                            <li><a href="Cart.html">Cart <span class='badge' id='lblCartCount'>0</span></a></li>
+                            <li id="btnToManage"><a href="Manage.html">Manage</a></li>
+                            <li id="btnToSystem"><a href="System.html">System</a></li>
+                            <li><div class="search">
+                                    <input type="text" id="txtSearch" placeholder="  Keyword">
+                                    <input type="image" id="btnSearch" title="Search" src="images/Search2.png"/>
+                                </div>
+                            </li> 
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="mainContainer">
+                <div id="sidebarcontainer"> 
+                    <div class="sidebarcontent">
+                        <iframe class="sidebar-frame" src="NewProducts.html" name="NewProduct"></iframe>
+                        <iframe class="sidebar-frame" src="Statistic.html" name="Statistic"></iframe>
+                    </div>
+                </div>
+                <div id="maincontent"> <!---Form here--->
+                    <div>
+                        <div class="menutitle">
+                            &loz; Product 1
+                        </div>
+                        <div class="detail-div">
+                            <img src="images/Nam_01.jpg" alt="img1" class="product-img">
+                            <div class="detail-content">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span><br>
+                                <b>Name</b>: Product 1<br>
+                                <b>Producer:</b> Company Z<br>
+                                <b>Available Size:</b> M, L, X<br>
+                                <b>Material:</b><br>
+                                <b>Price:</b> 300,000<br>
+                                <b>Stock Remain:</b> 100+ <input type="image" onclick="addToCart('1')" src="images/cart2.png"><br>
+                            </div>
+                            <div class="review">
+                                <table class="reviewtable bordered-table">
+                                    <caption class="table-caption">Review</caption>
+                                    <tr>
+                                        <td>legend27: <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span><br> this pant sucks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>thisIsTheName: <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span><br> inconvenient when wearing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anonymous: <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span><br> this is the best pant there ever be</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anonymous: <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span><br> this is the best pant there ever be</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anonymous: <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span><br> this is the best pant there ever be</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anonymous: <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span><br> this is the best pant there ever be</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anonymous: <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span><br> this is the best pant there ever be</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="menutitle">
+                            &loz; Related Products
+                        </div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a href="ProductDetail.html"><img src="images/Nam_02.jpg" alt="img2" class="relateImage"><br>Product 2 </a>
+                                    </td>
+                                    <td>
+                                        <a href="ProductDetail.html"><img src="images/Nam_03.jpg" alt="img3" class="relateImage"><br>Product 3 </a>
+                                    </td>
+                                    <td>
+                                        <a href="ProductDetail.html"><img src="images/Nam_04.jpg" alt="img4" class="relateImage"><br>Product 4 </a>
+                                    </td>
+                                    <td>
+                                        <a href="ProductDetail.html"><img src="images/Nam_05.jpg" alt="img5" class="relateImage"><br>Product 5 </a>
+                                    </td>
+                                    <td>
+                                        <a href="ProductDetail.html"><img src="images/Nam_06.jpg" alt="img6" class="relateImage"><br>Product 6 </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div> <!---Form here--->
+            </div>
+            <footer id="footer">
+                <div id="copyright">&copy; 2019 All Rights Reserved &bull; Design by <a href="#">ABCXYZ</a></div>
+                <div id="facebook">
+                    <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="images/youTube.png" alt="youtube"></a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

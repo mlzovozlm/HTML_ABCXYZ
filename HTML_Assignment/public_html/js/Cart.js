@@ -91,10 +91,10 @@ function updateTotalCost(itemId) {
     var quantity = Number(document.getElementById(inputId).value);
     var price = Number(document.getElementById(priceId).innerHTML);
     var total = document.getElementById(totalId);
-    if (quantity % 1 !== 0) {
+    if (quantity % 1 !== 0 || quantity <= 0) {
         return;
     }
-    total.innerHTML = quantity * price;
+    total.innerHTML = (quantity * price).toLocaleString();
 }
 function hideShowBtn() {
     var count = getCart().length;
@@ -108,6 +108,9 @@ function hideShowBtn() {
 function checkOut() {
     var valid = true;
     var cart = getCart();
+    if(cart.length === 0){
+        return;
+    }
     for (var i = 0; i < cart.length; i++) {
         var inputId = "quan" + cart[i].id;
         var quantity = Number(document.getElementById(inputId).value);

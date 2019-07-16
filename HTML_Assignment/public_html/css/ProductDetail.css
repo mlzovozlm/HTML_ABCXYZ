@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 16, 2019, 10:30:13 AM
+    Author     : Bao Anh Luu
+*/
+.detail-div{
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.product-img{
+    width: 200px;
+    float: left;
+    margin-left: 10px;
+}
+.detail-content{
+    float: left;
+    margin-left: 10px;
+}
+.review{
+    overflow: auto;
+    height: 300px;
+    float: right;
+    border: 1px solid;
+}
+.reviewtable td{
+    width: 250px;
+    padding: 5px;
+}
+.relateImage{
+    width:150px;
+    height:220px;
+}

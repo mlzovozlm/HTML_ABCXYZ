@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function initHomePage() {
+function initDetailPage(){
     updateCartLabel();
 }
-function search() {
-    return document.getElementById("txtSearch").value.trim() !== "";
-}
+

@@ -22,6 +22,7 @@ function initRegPage() {
         cities.add(option);
     }
     var i = 0;
+    PINImg.alt = "";
     while (i < 6) {
         PINImg.alt += "" + Math.floor(Math.random() * 10);
         i++;

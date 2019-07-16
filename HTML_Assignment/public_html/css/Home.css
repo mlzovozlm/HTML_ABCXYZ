@@ -12,13 +12,20 @@ and open the template in the editor.
     margin-top: 4px; 
     position: relative;
 }
+.product-td {
+    width: 180px;
+}
 .productList table tr td a{
     text-decoration: none;
     color: #8C0209;
 }
 .listImage {
-    width:180px;
+    width: 100%;
     height:240px;
+}
+.paging{
+    text-align: center;
+    margin-top: 10px;
 }
 /*-----------------------------DO NOT MODIFY--------------------------------------*/
 
