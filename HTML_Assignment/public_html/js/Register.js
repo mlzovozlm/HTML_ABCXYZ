@@ -64,7 +64,10 @@ function submitReg() {
                 + "Password must be 8 characters or longer\n";
         valid = false;
     }
-
+    if(pass !== repass) {
+	message += "Password does not match RePass\n";
+	valid = false; 
+    }
     if (cities.selectedIndex === 0 || districts.selectedIndex === 0) {
         message += "Select City & District\n";
         valid = false;
@@ -74,7 +77,9 @@ function submitReg() {
         message += "Wrong PIN\n";
         valid = false;
     }
-    alert(message);
+    if(!valid) {
+    	alert(message);
+    }
     return valid;
 }
 
